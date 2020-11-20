@@ -5,7 +5,8 @@ name = "pypi"
 
 [packages]
 flask = "*"
-github-webhook = "*"
+gitpython = "*"
+autopep8 = "*"
 
 [dev-packages]
 
