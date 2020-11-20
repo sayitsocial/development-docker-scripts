@@ -20,6 +20,7 @@ def hello_world():
 def on_push(data):
     if data["repository"]["id"] == 277559260:
         subprocess.run("chmod +x ./pull.sh", shell=True)
+	subprocess.run("chmod +x ./makeapp.sh", shell=True)
         flag = 0
         while (flag < 3):
             if subprocess.call("./pull.sh", shell=True) == 0:
@@ -28,6 +29,7 @@ def on_push(data):
                 flag += 1
         if flag != 69:
             return "Some error occured"
+	subprocess.call("./makeapp.sh", shell=True)
     return None
 
 
